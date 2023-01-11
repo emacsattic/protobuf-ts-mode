@@ -1,4 +1,4 @@
-;;; protobuf-ts-mode.el --- tree-sitter support for Protocol Buffers -*- lexical-binding: t; -*-
+;;; protobuf-ts-mode.el --- Tree sitter support for Protocol Buffers -*- lexical-binding: t; -*-
 
 ;; Author           : ookami <mail@ookami.one>
 ;; Version          : 1.0
@@ -20,7 +20,7 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
-;;
+;; Use tree-sitter for font-lock, imenu, indentation, and navigation
 
 ;;; Code:
 
@@ -64,16 +64,14 @@
 
    :language 'proto
    :feature 'type
-   '(
-     (service_name (identifier) @font-lock-type-face)
+   '((service_name (identifier) @font-lock-type-face)
      (message_name (identifier) @font-lock-type-face)
      (enum_name (identifier) @font-lock-type-face)
      (package (full_ident) @font-lock-type-face)
      ((key_type) @font-lock-type-face)
      ((type) @font-lock-type-face)
      ((message_or_enum_type) @font-lock-type-face)
-     "map" @font-lock-type-face
-     )
+     "map" @font-lock-type-face)
 
    :language 'proto
    :feature 'function
