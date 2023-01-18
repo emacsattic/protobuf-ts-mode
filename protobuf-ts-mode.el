@@ -1,4 +1,4 @@
-;;; protobuf-ts-mode.el --- Tree sitter support for Protocol Buffers -*- lexical-binding: t; -*-
+;;; protobuf-ts-mode.el --- Tree sitter support for Protocol Buffers (proto3 only) -*- lexical-binding: t; -*-
 
 ;; Author           : ookami <mail@ookami.one>
 ;; Version          : 1.0
@@ -21,6 +21,7 @@
 
 ;;; Commentary:
 ;; Use tree-sitter for font-lock, imenu, indentation, and navigation
+;; of protocol buffers files.  (proto3 only)
 
 ;;; Code:
 
