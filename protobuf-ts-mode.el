@@ -110,7 +110,7 @@
                 `(("Service" "\\`service_name\\'" nil nil)
                   ("RPC" "\\`rpc_name\\'" nil nil)
                   ("Message" "\\`message_name\\'" nil nil)
-                  ("Enum" "\\`enum_name'" nil nil)))
+                  ("Enum" "\\`enum_name\\'" nil nil)))
 
     ;; Indent
     (setq-local treesit-simple-indent-rules protobuf-ts-mode--indent-rules)
