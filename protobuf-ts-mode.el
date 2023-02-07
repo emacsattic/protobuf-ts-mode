@@ -94,11 +94,9 @@
     (treesit-parser-create 'proto)
 
     ;; Comments
-    (setq-local comment-start "/* ")
-    (setq-local comment-end "*/ ")
-    (setq-local comment-start-skip (rx (or (seq "/" (+ "/"))
-                                           (seq "/" (+ "*")))
-                                       (* (syntax whitespace))))
+    (setq-local comment-start "// ")
+    (setq-local comment-end "")
+    (setq-local comment-start-skip (rx "//" (* (syntax whitespace))))
 
     ;; Font-lock
     (setq-local treesit-font-lock-settings protobuf-ts-mode--font-lock-settings)
