@@ -124,8 +124,8 @@
 
     (treesit-major-mode-setup)))
 
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-ts-mode))
+(if (treesit-ready-p 'proto)
+    (add-to-list 'auto-mode-alist '("\\.proto\\'" . protobuf-ts-mode)))
 
 (provide 'protobuf-ts-mode)
 
