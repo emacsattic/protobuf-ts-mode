@@ -41,7 +41,8 @@
      ((parent-is "service") parent-bol protobuf-ts-mode-indent-offset)
      ((parent-is "rpc") parent-bol protobuf-ts-mode-indent-offset)
      ((parent-is "message_body") parent-bol protobuf-ts-mode-indent-offset)
-     ((parent-is "enum_body") parent-bol protobuf-ts-mode-indent-offset))))
+     ((parent-is "enum_body") parent-bol protobuf-ts-mode-indent-offset)
+     ((parent-is "oneof") parent-bol protobuf-ts-mode-indent-offset))))
 
 (defvar protobuf-ts-mode--keywords
   '("optional" "repeated"
@@ -72,7 +73,8 @@
      ((key_type) @font-lock-type-face)
      ((type) @font-lock-type-face)
      ((message_or_enum_type) @font-lock-type-face)
-     "map" @font-lock-type-face)
+     "map" @font-lock-type-face
+     "oneof" @font-lock-type-face)
 
    :language 'proto
    :feature 'function
